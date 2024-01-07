@@ -18,6 +18,5 @@ Välkomna till ett spännande och praktiskt projekt där vi ska skapa en enkel m
     - **`reduce`:** för att slå ihop totalpriset.
 - **Bonus:** Bryt ut varukorgen till en separat sida och använd **`localStorage`** för att spara innehållet i varukorgen över sessioner.
 - Använd regelbunden versionshantering och tydliga commitmeddelanden. 
-*Ett tips kan vara att bryta ut funktionalitet till flera olika script dokument för att minimera risken för konflikter.*
 - Prioritera funktionalitet, men glöm inte att webbplatsen ska vara responsiv och användarvänlig.
 - Ni får utgå från exemplen nedan eller koda allt från scratch!
