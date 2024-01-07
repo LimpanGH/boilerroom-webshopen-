@@ -81,6 +81,6 @@ Ni har full kreativ frihet att designa webbshoppen, men kom ihåg att enkelhet o
 
 ## **Inlämning**
 
-Inlämningen sker i canvas där ni hittade denna instruktion. Inkludera en GitHub-länk, närvarolista och en reflektion över uppdraget. Reflektera över de tekniker ni använt, hur ni fördelade arbetet inom gruppen, och vilka lärdomar ni dragit av projektet. Deadline är kl. 13:00.
+Inlämningen sker i Canvas där ni hittade denna instruktion. Inkludera en GitHub-länk, närvarolista och en reflektion över uppdraget. Reflektera över de tekniker ni använt, hur ni fördelade arbetet inom gruppen, och vilka lärdomar ni dragit av projektet. Deadline är kl. 16:00.
 
 Kom ihåg, även om ni inte hinner klart skickar ni in det ni har. Det viktigaste är att ni lär er och samlar erfarenhet. Vi är här för att utforska och utvecklas tillsammans! 💫🚀
