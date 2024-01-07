@@ -20,3 +20,53 @@ Välkomna till ett spännande och praktiskt projekt där vi ska skapa en enkel m
 - Använd regelbunden versionshantering och tydliga commitmeddelanden. 
 - Prioritera funktionalitet, men glöm inte att webbplatsen ska vara responsiv och användarvänlig.
 - Ni får utgå från exemplen nedan eller koda allt från scratch!
+
+* Exempel på HTML, CSS och JS *
+```
+/* 
+Ni väljer om ni använder produktdatan i js eller json och om ni vill lägga till 
+fler properties som bilder etc.
+
+Ni får också använda ett api som t.ex. https://fakestoreapi.com/ för att generara
+ut fiktiva produkter därifrån istället för från en lokal js/json.
+*/
+
+const products = [
+    { id: 1, name: 'T-shirt', category: 'kläder', price: 100 },
+    { id: 2, name: 'Hörlurar', category: 'elektronik', price: 250 },
+    { id: 3, name: 'Keps', category: 'kläder', price: 50 },
+    { id: 4, name: 'Mobiltelefon', category: 'elektronik', price: 500 }
+];
+
+const cart = [];
+```
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Enkel Webbshop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Välkommen till vår Webbshop!</h1>
+	  
+	<h2>Våra produkter</h2>
+	<!-- filter knappar för produkt kategorier här -->
+	<!-- Visa era produkter innuti product-container -->
+  <div id="product-container"></div>
+
+  <h2>Din Varukorg</h2>
+	<!-- visa produkter som lagts till i kundvagnen och totalsumman innuti cart -->
+  <div id="cart"></div>
+	
+	<!-- alert, eller sida som säger produkterna är på väg -->
+  <button id="checkout">Gå till kassan</button>
+	
+  <script src="script.js"></script>
+</body>
+
+</html>
+```
