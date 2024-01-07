@@ -2,13 +2,14 @@
 
 Välkomna till ett spännande och praktiskt projekt där vi ska skapa en enkel men funktionell webbshop! I detta projekt kommer ni att bygga en webbplats för en fiktiv butik som säljer ett urval av produkter. Målet är att ge er praktisk erfarenhet av webbutveckling och att använda JavaScript för att manipulera data och skapa en interaktiv användarupplevelse.
 
-## **Instruktioner**
+## **Instruktioner** 👋
 
-👋 * Ni bestämmer själva hur många ni vill vara i ert team.
+*Teamet:*
+* Ni bestämmer själva hur många ni vill vara i ert team.
 * Utse en lagkapten som koordinerar gruppens arbete och säkerställer att projektet blir klart i tid.
 * Diskutera och fördela roller inom gruppen i början av projektet för att säkerställa en effektiv arbetsfördelning.
 
-
+*Vad ni ska göra:*
 - Utveckla en enkel webbshop där besökarna kan se och interagera med ett urval av produkter. Den behöver bara innehålla en HTML-sida men får innehålla fler.
 - Använd arraymetoder som **`map`**, **`filter`**, och **`reduce`** för att hantera produktdatan.
 - Ni ska visa produkter baserat på produktdata, det ska gå att filtrera mellan kategorier, det ska gå att lägga till produkter i en varukorg och även beräkna totalpriset av produkterna som lagts till i varukorgen. Ni får addera mer funktionalitet om ni hinner.
