@@ -2,7 +2,8 @@
 
 Välkomna till ett spännande och praktiskt projekt där vi ska skapa en enkel men funktionell webbshop! I detta projekt kommer ni att bygga en webbplats för en fiktiv butik som säljer ett urval av produkter. Målet är att ge er praktisk erfarenhet av webbutveckling och att använda JavaScript för att manipulera data och skapa en interaktiv användarupplevelse.
 
-![Inspo webbshop](https://github.com/.png](https://github.com/chasacademy-sandra-larsson/boilerroom-webshoppen/blob/main/inspo.png)
+![](https://github.com/chasacademy-sandra-larsson/boilerroom-webshoppen/blob/main/inspo.png)
+
 ## **Instruktioner** 👋
 
 *Teamet:*
@@ -74,6 +75,9 @@ const cart = [];
 ## **Inspiration för Design**
 
 Ni har full kreativ frihet att designa webbshoppen, men kom ihåg att enkelhet ofta är nyckeln till användarvänlighet. För inspiration, ta en titt på bilden nedan eller några befintliga e-handelsplattformar. *Observera bilden är med för inspiration ni måste inte följa den designen.*
+
+![](https://github.com/chasacademy-sandra-larsson/boilerroom-webshoppen/blob/main/inspo2.png)
+![](https://github.com/chasacademy-sandra-larsson/boilerroom-webshoppen/blob/main/inspo3.png)
 
 ## **Inlämning**
 
