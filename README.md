@@ -21,7 +21,7 @@ Välkomna till ett spännande och praktiskt projekt där vi ska skapa en enkel m
 - Prioritera funktionalitet, men glöm inte att webbplatsen ska vara responsiv och användarvänlig.
 - Ni får utgå från exemplen nedan eller koda allt från scratch!
 
-*Exempel på HTML, CSS och JS*
+*Exempel på HTML och JS*
 ```
 /* 
 Ni väljer om ni använder produktdatan i js eller json och om ni vill lägga till 
@@ -70,3 +70,12 @@ const cart = [];
 
 </html>
 ```
+## **Inspiration för Design**
+
+Ni har full kreativ frihet att designa webbshoppen, men kom ihåg att enkelhet ofta är nyckeln till användarvänlighet. För inspiration, ta en titt på bilden nedan eller några befintliga e-handelsplattformar. *Observera bilden är med för inspiration ni måste inte följa den designen.*
+
+## **Inlämning**
+
+Inlämningen sker i canvas där ni hittade denna instruktion. Inkludera en GitHub-länk, närvarolista och en reflektion över projektet. Reflektera över de tekniker ni använt, hur ni fördelade arbetet inom gruppen, och vilka lärdomar ni dragit av projektet. Deadline är kl. 13:00.
+
+Kom ihåg, även om ni inte hinner klart skickar ni in det ni har. Det viktigaste är att ni lär er och samlar erfarenhet. Vi är här för att utforska och utvecklas tillsammans! 💫🚀
