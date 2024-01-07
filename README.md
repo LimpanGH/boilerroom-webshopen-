@@ -2,7 +2,7 @@
 
 Välkomna till ett spännande och praktiskt projekt där vi ska skapa en enkel men funktionell webbshop! I detta projekt kommer ni att bygga en webbplats för en fiktiv butik som säljer ett urval av produkter. Målet är att ge er praktisk erfarenhet av webbutveckling och att använda JavaScript för att manipulera data och skapa en interaktiv användarupplevelse.
 
-![Alt text of the image](https://github.com/.png)
+![Inspo webbshop]([https://github.com/.png](https://github.com/chasacademy-sandra-larsson/boilerroom-webshoppen/blob/main/inspo.png))
 ## **Instruktioner** 👋
 
 *Teamet:*
