@@ -21,7 +21,7 @@ Välkomna till ett spännande och praktiskt projekt där vi ska skapa en enkel m
 - Prioritera funktionalitet, men glöm inte att webbplatsen ska vara responsiv och användarvänlig.
 - Ni får utgå från exemplen nedan eller koda allt från scratch!
 
-* Exempel på HTML, CSS och JS *
+*Exempel på HTML, CSS och JS*
 ```
 /* 
 Ni väljer om ni använder produktdatan i js eller json och om ni vill lägga till 
