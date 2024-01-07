@@ -1,6 +1,6 @@
 ## **Intro**
 
-Välkomna till ett spännande och praktiskt projekt där vi ska skapa en enkel men funktionell webbshop! I detta projekt kommer ni att bygga en webbplats för en fiktiv butik som säljer ett urval av produkter. Målet är att ge er praktisk erfarenhet av webbutveckling och att använda JavaScript för att manipulera data och skapa en interaktiv användarupplevelse.
+Välkomna till ett spännande och praktiskt uppdrag där vi ska skapa en enkel men funktionell webbshop! I detta projekt kommer ni att bygga en webbplats för en fiktiv butik som säljer ett urval av produkter. Målet är att ge er praktisk erfarenhet av webbutveckling och att använda JavaScript för att manipulera data och skapa en interaktiv användarupplevelse.
 
 ![](https://github.com/chasacademy-sandra-larsson/boilerroom-webshoppen/blob/main/inspo.png)
 
@@ -18,7 +18,7 @@ Välkomna till ett spännande och praktiskt projekt där vi ska skapa en enkel m
     - **`map`:** för att rendera ut produkterna från början och i kundvagnen.
     - **`filter`:** för att filtrera kategorierna.
     - **`reduce`:** för att slå ihop totalpriset.
-- **Bonus:** Bryt ut varukorgen till en separat sida och använd **`localStorage`** för att spara innehållet i varukorgen över sessioner.
+- Byt ut varukorgen till en separat sida och använd **`localStorage`** för att spara innehållet i varukorgen över sessioner.
 - Använd regelbunden versionshantering och tydliga commitmeddelanden. 
 - Prioritera funktionalitet, men glöm inte att webbplatsen ska vara responsiv och användarvänlig.
 - Ni får utgå från exemplen nedan eller koda allt från scratch!
@@ -55,16 +55,16 @@ const cart = [];
 <body>
   <h1>Välkommen till vår Webbshop!</h1>
 	  
-	<h2>Våra produkter</h2>
-	<!-- filter knappar för produkt kategorier här -->
-	<!-- Visa era produkter innuti product-container -->
+  <h2>Våra produkter</h2>
+  <!-- filter knappar för produkt kategorier här -->
+  <!-- Visa era produkter innuti product-container -->
   <div id="product-container"></div>
 
   <h2>Din Varukorg</h2>
-	<!-- visa produkter som lagts till i kundvagnen och totalsumman innuti cart -->
+  <!-- visa produkter som lagts till i kundvagnen och totalsumman innuti cart -->
   <div id="cart"></div>
 	
-	<!-- alert, eller sida som säger produkterna är på väg -->
+  <!-- alert, eller sida som säger produkterna är på väg -->
   <button id="checkout">Gå till kassan</button>
 	
   <script src="script.js"></script>
