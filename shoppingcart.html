@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Enkel Webbshop - Shoppincart</title>
-</head>
-<body>
-    <div class="total-section">
-<p>Total Bill: <span id="total">0</span></p>
+  </head>
+  <body>
+    <header>
+      <h1>Shoppingbag</h1>
+      <!-- visa produkter som lagts till i kundvagnen och totalsumman innuti cart -->
+      <div id="cart"></div>
 
-    </div>
-</body>
+      <!-- alert, eller sida som säger produkterna är på väg -->
+      <button id="checkout">
+        <a href="shoppingcart.html"> Gå till kassan</a>
+      </button>
+    </header>
+    <main>
+      <div class="total-section">
+        <p>Total Bill: <span id="total">0</span></p>
+        <button class="clear-button">Clear Cart</button>
+      </div>
+    </main>
+  </body>
 </html>

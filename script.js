@@ -14,25 +14,27 @@ reduce: för att slå ihop totalpriset.
 
 // const cart = [];
 */
-
-const productContainer = document.querySelector('#product-container'); //Variable that holds our products
+const filterMen = document.querySelector(".filter-men");
+const filterJewelery = document.querySelector(".filter-jewelery");
+const filterElectronic = document.querySelector(".filter-electronic");
+const filterWomen = document.querySelector(".filter-women");
+const productContainer = document.querySelector("#product-container"); //Variable that holds our products
 let cart = [];
 let totalBill = 0;
-
 
 // Function to update local storage with the cart variable
 function updateLocalStorage() {
   const dataToStore = {
     cart: cart,
-    totalBill: totalBill
+    totalBill: totalBill,
   };
 
   const dataJSON = JSON.stringify(dataToStore);
-  localStorage.setItem('cartData', dataJSON);
+  localStorage.setItem("cartData", dataJSON);
 }
 
 // Fetch data ----------------------------------
-fetch('https://fakestoreapi.com/products')
+fetch("https://fakestoreapi.com/products")
   // .then((response) => console.log(response)) //logs the response-object
   .then((response) => response.json()) // Parsing the response-object to json
   //console.log(response);
@@ -42,12 +44,20 @@ fetch('https://fakestoreapi.com/products')
     displayProducts(data);
     //calculateTotalBill(data);
 
-       // Apply filters based on category, connect them to the buttons in the nav-bar /Linus
-    // filterProductsByCategory(data, 'men\'s clothing');
-    // filterProductsByCategory(data, 'women\'s clothing');
-    // filterProductsByCategory(data, 'electronics');
-    filterProductsByCategory(data, 'jewelery');
-
+    // Apply filters based on category, connect them to the buttons in the nav-bar /Linus
+filterMen.addEventListener("click", () => {
+  console.log("klick");
+  filterProductsByCategory(data, "men's clothing");
+});
+filterJewelery.addEventListener("click", () => {
+  filterProductsByCategory(data, "jewelery");
+});
+filterElectronic.addEventListener("click", () => {
+  filterProductsByCategory(data, "electronics");
+});
+filterWomen.addEventListener("click", () => {
+  filterProductsByCategory(data, "women's clothing");
+});
   })
   .catch((error) => console.log(error));
 
@@ -67,48 +77,55 @@ function displayProducts(products) {
       <button class="add-button">+</button>
   </span>
   </div>`
-    ).join('');
+    )
+    .join("");
 
   productContainer.innerHTML = html;
 
+  // Lägg till event listeners för +/- knappar
+  document.querySelectorAll(".quantity-buttons").forEach((buttonsContainer) => {
+    const productId =
+      buttonsContainer.querySelector(".quantity").dataset.productId;
 
- // Lägg till event listeners för +/- knappar
- document.querySelectorAll('.quantity-buttons').forEach((buttonsContainer) => {
-  const productId = buttonsContainer.querySelector('.quantity').dataset.productId;
+    buttonsContainer
+      .querySelector(".add-button")
+      .addEventListener("click", () => {
+        updateCart(productId, 1);
+        updateQuantity(productId, 1);
+        calculateTotalBill();
+      });
 
-  buttonsContainer.querySelector('.add-button').addEventListener('click', () => {
-    updateCart(productId, 1);
-    updateQuantity(productId, 1);
-    calculateTotalBill();
+    buttonsContainer
+      .querySelector(".sub-button")
+      .addEventListener("click", () => {
+        updateCart(productId, -1);
+        updateQuantity(productId, -1);
+        calculateTotalBill();
+      });
   });
-
-  buttonsContainer.querySelector('.sub-button').addEventListener('click', () => {
-    updateCart(productId, -1);
-    updateQuantity(productId, -1);
-    calculateTotalBill();
-  });
-});
 }
 
 // Uppdatera varukorgen
 function updateCart(productId, quantityChange) {
-const existingProduct = cart.find((item) => item.productId === productId);
+  const existingProduct = cart.find((item) => item.productId === productId);
 
-if (existingProduct) {
-  existingProduct.quantity += quantityChange;
-  if (existingProduct.quantity <= 0) {
-    cart = cart.filter((item) => item.productId !== productId);
+  if (existingProduct) {
+    existingProduct.quantity += quantityChange;
+    if (existingProduct.quantity <= 0) {
+      cart = cart.filter((item) => item.productId !== productId);
+    }
+  } else if (quantityChange > 0) {
+    cart.push({ productId, quantity: 1 });
   }
-} else if (quantityChange > 0) {
-  cart.push({ productId, quantity: 1 });
-}
 }
 
 // Uppdatera kvantiteten för en specifik produkt
 function updateQuantity(productId, quantityChange) {
-const quantityElement = document.querySelector(`.quantity[data-product-id="${productId}"]`);
-const currentQuantity = parseInt(quantityElement.textContent, 10);
-quantityElement.textContent = Math.max(0, currentQuantity + quantityChange);
+  const quantityElement = document.querySelector(
+    `.quantity[data-product-id="${productId}"]`
+  );
+  const currentQuantity = parseInt(quantityElement.textContent, 10);
+  quantityElement.textContent = Math.max(0, currentQuantity + quantityChange);
 }
 
 //   Filtrering ---------------------------------- / Linus
@@ -116,10 +133,10 @@ function filterProductsByCategory(items, category) {
   const filteredItems = items.filter((item) => {
     return item.category.toLowerCase() === category.toLowerCase();
   });
-  
+
   const html = filteredItems
-  .map(
-    (product) => `
+    .map(
+      (product) => `
     <div class="product-item" data-id="${product.id}" data-price="${product.price}">
     <img class="product-image" src="${product.image}" alt="${product.title}">
     <h3>${product.title}</h3>
@@ -132,14 +149,14 @@ function filterProductsByCategory(items, category) {
     </span>
     </div>`
     )
-    .join('');
-    
-    productContainer.innerHTML = html;
-    
-    console.log(`Filtered Items (${category}):`, filteredItems);
-    console.log(`HTML:`, html);
-  }
-  
+    .join("");
+
+  productContainer.innerHTML = html;
+
+  console.log(`Filtered Items (${category}):`, filteredItems);
+  console.log(`HTML:`, html);
+}
+
 /* 
 // Add/ remove to shoppingcart ----------------------------------
 // Display total pruduct count in minicart
@@ -170,7 +187,9 @@ form.addEventListener('submit', (e) => {
 // Visa totalt belopp
 function calculateTotalBill() {
   totalBill = cart.reduce((total, item) => {
-    const product = document.querySelector(`.product-item[data-id="${item.productId}"]`);
+    const product = document.querySelector(
+      `.product-item[data-id="${item.productId}"]`
+    );
     const price = parseFloat(product.dataset.price);
     return total + item.quantity * price;
   }, 0);
@@ -178,7 +197,7 @@ function calculateTotalBill() {
   console.log(`Det totala priset är: ${totalBill}`);
   console.log(cart);
   console.log(typeof totalBill);
-  
+
   // Update local storage after calculating the total bill
   updateLocalStorage(totalBill);
 
