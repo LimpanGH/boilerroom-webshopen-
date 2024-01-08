@@ -1,5 +1,12 @@
 // old for each function /Zabi
- let quantity = 0;
+// Anders
+productItems.forEach((item) => {
+  const addButton = item.querySelector('.add-button');
+  const subButton = item.querySelector('.sub-button');
+  const quantityItem = item.querySelector('.quantity');
+})
+
+let quantity = 0;
 
   addButton.addEventListener('click', () => {
     quantity++;
@@ -31,9 +38,3 @@
 
 
 
-// Anders
-productItems.forEach((item) => {
-    const addButton = item.querySelector('.add-button');
-    const subButton = item.querySelector('.sub-button');
-    const quantityItem = item.querySelector('.quantity');
-  })

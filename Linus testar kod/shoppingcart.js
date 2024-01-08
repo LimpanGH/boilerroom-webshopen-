@@ -1,15 +1,4 @@
-// Retrieving data from local storage on a new page
-const storedDataJSON = localStorage.getItem('cartData');
-
-// Parsing the JSON string back into an object
-const storedData = JSON.parse(storedDataJSON);
-
-// Now 'storedData' contains the cart and totalBill
-console.log(storedData);
-
-
-
-/*
+// Startkod ta emot Localstorage från index.html /Linus
 const avatarUrl = localStorage.getItem('avatarUrl');
 let imgOfPlayerAvatar = document.querySelector('#imgOfPlayerAvatar');
 imgOfPlayerAvatar.src = avatarUrl;

@@ -10,20 +10,27 @@
     <header>
     <h1>Välkommen till vår Webbshop!</h1>
     <nav>
-    <ul class="filter-products"></ul>
+    <ul class="filter-products">
+        <li class="filter-text">mens clothing</li>
+    <li class="filter-text">jewelery</li>
+    <li class="filter-text">electronics</li>
+    <li class="filter-text">womens clothing</li>
+    </ul>
+    
+    <h2>Din Varukorg</h2>
+    
+    <!-- visa produkter som lagts till i kundvagnen och totalsumman innuti cart -->
+    <div id="cart"></div>
+
+    <!-- alert, eller sida som säger produkterna är på väg -->
+    <button id="checkout"><a href="shoppingcart.html"> Gå till kassan</a> </button>
     </nav>
+    
 </header>
     <h2>Våra produkter</h2>
     <!-- filter knappar för produkt kategorier här -->
     <!-- Visa era produkter innuti product-container -->
     <div class="product-list" id="product-container"></div>
-
-    <h2>Din Varukorg</h2>
-    <!-- visa produkter som lagts till i kundvagnen och totalsumman innuti cart -->
-    <div id="cart"></div>
-
-    <!-- alert, eller sida som säger produkterna är på väg -->
-    <button id="checkout">Gå till kassan</button>
 
     <script src="script.js"></script>
   </body>
